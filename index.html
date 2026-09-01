@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo Didático: Bootstrap Grid System + Vite</title>
+  </head>
+  <body class="bg-light p-4">
+    <div class="container">
+
+      <!-- Cabeçalho -->
+      <header class="mb-5 text-center">
+        <h1 class="display-5 text-primary">Bootstrap Grid System</h1>
+        <p class="lead text-secondary">
+          Projeto didático rodando com <strong>Vite</strong>. Redimensione a janela do navegador para ver o Grid funcionando!
+        </p>
+      </header>
+
+      <!-- EXEMPLO 1: Grid Simples com Divisão Igual -->
+      <section class="mb-5">
+        <h2 class="h4 mb-3">1. Três Colunas Iguais (Largura Automática)</h2>
+        <div class="row g-3">
+          <div class="col">
+            <div class="demo-box">Coluna 1</div>
+          </div>
+          <div class="col">
+            <div class="demo-box">Coluna 2</div>
+          </div>
+          <div class="col">
+            <div class="demo-box">Coluna 3</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXEMPLO 2: Sistema de 12 Colunas (Proporções Específicas) -->
+      <section class="mb-5">
+        <h2 class="h4 mb-3">2. Proporção Específica (8 Colunas + 4 Colunas = 12 Colunas)</h2>
+        <div class="row g-3">
+          <div class="col-8">
+            <div class="demo-box">col-8 (Conteúdo Principal)</div>
+          </div>
+          <div class="col-4">
+            <div class="demo-box-alt">col-4 (Sidebar)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXEMPLO 3: Responsividade com Breakpoints (Mobile First) -->
+      <section class="mb-5">
+        <h2 class="h4 mb-3">3. Grid Responsivo (Empilhado no Celular, Lado a Lado no Desktop)</h2>
+        <p class="text-muted small">
+          Utiliza <code>col-12 col-md-4</code>: ocupa 100% da largura em telas pequenas e 4/12 (1/3) em telas médias/grandes (≥768px).
+        </p>
+        <div class="row g-3">
+          <div class="col-12 col-md-4">
+            <div class="demo-box">Bloco A</div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="demo-box">Bloco B</div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="demo-box">Bloco C</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Script de entrada do Vite -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
